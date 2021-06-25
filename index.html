@@ -4,10 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Adición</title>
+    <style>
+        body {
+            width: 100%;
+            margin: 0;
+            background-color: #808080;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .clock {
+            flex-direction: row;
+        }
+        button {
+            margin: 2em 0.5em;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="functions">
+            <button onclick="additionFunction()">Adición</button>
+            <button onclick="subtractionFunction()">Substración</button>
+            <button onclick="multiplicationFunction()">Multiplicación</button>
+            <button onclick="divitionFunction()">División</button>
+            <button onclick="moduleFunction()">Módulo</button>
+            <button onclick="celsiusToFahrenheit()">C° a F°</button>
+            <button onclick="celsiusToKelvin()">C° a K°</button>
+        </div>
+        <div class="clock">
+            <button onclick="calculateTime()">Calcular tiempo</button>
+            <div id="time"></div>
+        </div>
+        <table class="grades">
+            <button onclick="calculateNumbers()">Calcular Promedio</button>
+            <thead>
+                <tr>
+                    <th>*</th>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                    <th>Nota 3</th>
+                    <th>Nota 4</th>
+                    <th>Nota 5</th>
+                    <th>Promedio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Números</th>
+                    <th id="numberOne">#</th>
+                    <th id="numberTwo">#</th>
+                    <th id="numberThree">#</th>
+                    <th id="numberFour">#</th>
+                    <th id="numberFive">#</th>
+                    <th id="numberResult">#</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,11 +1,94 @@
+function additionFunction(){
     // constantes para definir los números
-    const number1 = parseInt(prompt('Inserte el primer número'));
-    const number2 = parseInt(prompt('Inserte el segundo número'));
-    // constante que suma los números definidos
-    const result = number1 + number2
-    // mostrar el resultado de los números
-    document.write(`La suma entre ${number1} y ${number2} es ${result}`)
-    
-    // mostrar el resultado de los números en la consola
-    // console.log (`La suma entre ${number1} y ${number2} es ${result}`)
-    
+    const numberOne = parseInt(prompt('Inserte el primer número'));
+    const numberTwo = parseInt(prompt('Inserte el segundo número'));
+    const result = numberOne + numberTwo
+    // checkea si los constantes cumplen los requisitos
+        if (numberOne <= 0 || numberTwo <= 0 || numberOne === numberTwo) {
+            alert('Los números son invalidos')
+        } else {
+            // mostrar el resultado de los números
+            alert(`La suma entre ${numberOne} y ${numberTwo} es ${result}`)
+        }
+}
+
+function subtractionFunction(){
+    const numberOne = parseInt(prompt('Inserte el primer número'));
+    const numberTwo = parseInt(prompt('Inserte el segundo número'));
+    const result = numberOne - numberTwo
+        if (numberOne <= 0 || numberTwo <= 0 || numberOne === numberTwo) {
+            alert('Los números son invalidos')
+        } else {
+            alert(`La resta entre ${numberOne} y ${numberTwo} es ${result}`)
+        }
+}
+
+function multiplicationFunction(){
+    const numberOne = parseInt(prompt('Inserte el primer número'));
+    const numberTwo = parseInt(prompt('Inserte el segundo número'));
+    const result = numberOne * numberTwo
+        if (numberOne <= 0 || numberTwo <= 0 || numberOne === numberTwo) {
+            alert('Los números son invalidos')
+        } else {
+            alert(`La multiplicación entre ${numberOne} y ${numberTwo} es ${result}`)
+        }
+}
+
+function divitionFunction(){
+    const numberOne = parseInt(prompt('Inserte el primer número'));
+    const numberTwo = parseInt(prompt('Inserte el segundo número'));
+    const result = numberOne / numberTwo
+        if (numberOne <= 0 || numberTwo <= 0 || numberOne === numberTwo) {
+            alert('Los números son invalidos')
+        } else {
+            alert(`La división entre ${numberOne} y ${numberTwo} es ${result}`)
+        }
+}
+
+function moduleFunction(){
+    const numberOne = parseInt(prompt('Inserte el primer número'));
+    const numberTwo = parseInt(prompt('Inserte el segundo número'));
+    const result = numberOne % numberTwo
+        if (numberOne <= 0 || numberTwo <= 0 || numberOne === numberTwo) {
+            alert('Los números son invalidos')
+        } else {
+            alert(`El módulo entre ${numberOne} y ${numberTwo} es ${result}`)
+        }
+}
+
+function celsiusToFahrenheit(){
+    const celsius = parseInt(prompt('Inserte los gradous Celsius C°'));
+    const fahrenheit = parseInt((9 / 5) + 32);
+    const result = celsius * fahrenheit
+        alert(`resultado es ${result}`)
+
+}
+
+function celsiusToKelvin(){
+    const celsius = parseInt(prompt('Inserte los gradous Celsius C°'));
+    const kelvin = parseFloat(273.15);
+    const result = celsius + kelvin
+        alert(`resultado es ${result}`)
+}
+
+function calculateTime(){
+    const days = parseInt(prompt('Inserte la cantidad de días'));
+    const weeks = parseInt(prompt('Inserte la cantidad de semanas'));
+    const years = parseInt(prompt('Inserte la cantidad de años'));
+
+}
+
+function calculateNumbers(){
+    const numberOne = parseInt(prompt('Inserte la primera nota'))
+        document.getElementById("numberOne").innerHTML = (numberOne)
+    const numberTwo = parseInt(prompt('Inserte la segunda nota'))
+        document.getElementById("numberTwo").innerHTML = (numberTwo)
+    const numberThree = parseInt(prompt('Inserte la tercera nota'))
+        document.getElementById("numberThree").innerHTML = (numberThree)
+    const numberFour = parseInt(prompt('Inserte la cuarta nota'))
+        document.getElementById("numberFour").innerHTML = (numberFour)
+    const numberFive = parseInt(prompt('Inserte la quinta nota'))
+        document.getElementById("numberFive").innerHTML = (numberFive)
+    const numberResult = parseInt(numberOne + numberTwo + numberThree + numberFour + numberFive)
+        document.getElementById("numberResult").innerHTML = (numberResult / 5)
+}
