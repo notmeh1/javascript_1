@@ -58,9 +58,8 @@ function moduleFunction(){
 
 function celsiusToFahrenheit(){
     const celsius = parseInt(prompt('Inserte los gradous Celsius C°'));
-    const fahrenheit = parseInt((9 / 5) + 32);
-    const result = celsius * fahrenheit
-        alert(`resultado es ${result}`)
+    const fahrenheit = celsius * 9 / 5 + 32
+        alert(`resultado es ${fahrenheit}`)
 
 }
 
@@ -73,8 +72,32 @@ function celsiusToKelvin(){
 
 function calculateTime(){
     const days = parseInt(prompt('Inserte la cantidad de días'));
-    const weeks = parseInt(prompt('Inserte la cantidad de semanas'));
-    const years = parseInt(prompt('Inserte la cantidad de años'));
+        if (days <= 0) {
+            alert("El número es invalido")
+        }
+    const calculateTimimg = d => {
+        let months = 0, years = 0, days = 0, weeks = 0;
+        while(d){
+           if(d >= 365){
+              years++;
+              d -= 365;
+           }else if(d >= 30){
+              months++;
+              d -= 30;
+           }else if(d >= 7){
+              weeks++;
+              d -= 7;
+           }else{
+              days++;
+              d--;
+           }
+        };
+        return {
+           years, months, weeks, days
+        };
+     };
+     const timeJSON = JSON.stringify(calculateTimimg(days))
+     document.getElementById("time").innerHTML = timeJSON;
 
 }
 
