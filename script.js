@@ -27,7 +27,7 @@ function multiplicationFunction(){
     const numberOne = parseInt(prompt('Inserte el primer número'));
     const numberTwo = parseInt(prompt('Inserte el segundo número'));
     const result = numberOne * numberTwo
-        if (numberOne <= 0 || numberTwo <= 0 || numberOne === numberTwo) {
+        if (numberOne <= 0 || numberTwo <= 0) {
             alert('Los números son invalidos')
         } else {
             alert(`La multiplicación entre ${numberOne} y ${numberTwo} es ${result}`)
